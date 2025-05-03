@@ -7,6 +7,19 @@ Author-dnyandip jamdhade
 
 (
 
+
+    public LoginScreen() {
+        // Frame settings
+        setTitle("Login Screen");
+        setSize(300, 200);
+        setLayout(new GridLayout(5, 2));
+        setLocationRelativeTo(null);
+        setVisible(true);
+
+
+
+
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -22,13 +35,13 @@ public class LoginScreen extends Frame implements ActionListener {
     Button loginButton, clearButton;
     int attempts = 3;
 
-    public LoginScreen() {
-        // Frame settings
-        setTitle("Login Screen");
-        setSize(300, 200);
-        setLayout(new GridLayout(5, 2));
-        setLocationRelativeTo(null);
-        setVisible(true);
+
+
+
+
+
+
+        
 
         // Create components
         userLabel = new Label("Username:");
