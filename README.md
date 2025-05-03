@@ -5,8 +5,23 @@ Author-dnyandip jamdhade
 
 #code
 
-(
 
+
+
+    import java.awt.*;
+    import java.awt.event.*;
+
+    class LoginException extends Exception {
+    public LoginException(String message) {
+        super(message);
+    }
+    }
+
+    public class LoginScreen extends Frame implements ActionListener {
+    Label userLabel, passLabel, msgLabel;
+    TextField userText, passText;
+    Button loginButton, clearButton;
+    int attempts = 3;
 
     public LoginScreen() {
         // Frame settings
@@ -15,33 +30,6 @@ Author-dnyandip jamdhade
         setLayout(new GridLayout(5, 2));
         setLocationRelativeTo(null);
         setVisible(true);
-
-
-
-
-
-import java.awt.*;
-import java.awt.event.*;
-
-class LoginException extends Exception {
-    public LoginException(String message) {
-        super(message);
-    }
-}
-
-public class LoginScreen extends Frame implements ActionListener {
-    Label userLabel, passLabel, msgLabel;
-    TextField userText, passText;
-    Button loginButton, clearButton;
-    int attempts = 3;
-
-
-
-
-
-
-
-        
 
         // Create components
         userLabel = new Label("Username:");
@@ -103,6 +91,4 @@ public class LoginScreen extends Frame implements ActionListener {
     public static void main(String[] args) {
         new LoginScreen();
     }
-}
-
-)
+    }
